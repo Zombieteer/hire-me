@@ -72,14 +72,14 @@ function App() {
 
       {['mp4'].includes(asset?.assetExtension) ? (
         <video
-          style={{ maxWidth: '70vw', maxHeight: '70vh' }}
+          className='asset'
           src={asset.randomAsset}
           autoPlay
           loop
         />
       ) : (
         <img
-          style={{ maxWidth: '70vw', maxHeight: '70vh' }}
+          className='asset'
           src={asset.randomAsset}
           alt='Random Image'
         />
