@@ -67,3 +67,14 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.details {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px ;
+}
+
+a {
+  display: flex;
+  gap: 10px ;
+}

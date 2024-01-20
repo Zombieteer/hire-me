@@ -3,6 +3,25 @@ import './App.css'
 import homeList from './assets/homePage'
 import noList from './assets/nos'
 import yesList from './assets/yeses'
+import gmail from './assets/icons/gmail.png'
+import linkedin from './assets/icons/linkedin.png'
+import phone from './assets/icons/phone.png'
+
+const userDetails = [
+  {
+    icon: gmail,
+    detail: 'aryan.nigam1996@gmail.com',
+    href: `mailto:aryan.nigam1996@gmail.com`
+  }, {
+    icon: phone,
+    detail: '+91-9532044474',
+    href: `tel:9532044474`
+  }, {
+    icon: linkedin,
+    detail: 'linkedin.com/in/shobhit-nigam',
+    href: `https://www.linkedin.com/in/shobhit-nigam`
+  },
+]
 
 function App() {
   const [homeState, setHomeState] = useState('home')
@@ -91,6 +110,18 @@ function App() {
       )}
       {homeState === 'no' && (<h2>How dare you?</h2>)}
       {homeState === 'yes' && (<h2>Yeaaah !!</h2>)}
+
+      <div className='details'>
+        {userDetails.map((item, index) =>
+          <a href={item.href} target='_blank' key={index}>
+            <img
+              style={{ width: '25px', height: '25px' }}
+              src={item.icon}
+              alt={`${item.icon} icon`}
+            />{item.detail}
+          </a>
+        )}
+      </div >
     </>
   )
 }
